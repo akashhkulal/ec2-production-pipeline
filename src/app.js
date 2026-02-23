@@ -21,10 +21,10 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(morgan('dev'));
 app.use(myConnection(mysql, {
     host: 'localhost',
-    user: 'root',
-    password: PASS,
+    user: 'akash',
+    password: 'Akash#123',
     port: '3306',
-    database: 'crudnodejsmysql'
+    database: 'crud_db'
 }, 'single'));
 app.use(express.urlencoded({extended: false}));
 
@@ -36,5 +36,5 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Starting the server
 app.listen(app.get('port'), () => {
-    console.log('Server on port 3000');
+    console.log('Serve	r on port 3000');
 })
